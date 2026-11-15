@@ -1,0 +1,37 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #000811;
+    color: #FFC300;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+
+    border-bottom: 3px solid #001328;
+    border-radius: 1rem;
+
+    padding: 1rem;
+}
+
+.wing{
+    display: inherit;
+    flex-direction: inherit;
+}
+
+.wing .left #logo{
+    align-items: center;
+    justify-content: center;
+}
+
+.wing.left #logo img{
+    height: clamp(40px, 5vw, 60px);
+}
