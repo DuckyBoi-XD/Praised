@@ -18,8 +18,14 @@ nav {
 
     border-bottom: 3px solid #001328;
     border-radius: 1rem;
+    
+    /*
+    padding: 0.75rem 2rem 0.35rem 3rem;
+    */
 
-    padding: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.35rem;
+    padding-left: clamp(0.5rem, 3.5vw, 3rem);
 }
 
 .wing{
@@ -34,4 +40,19 @@ nav {
 
 .wing.left #logo img{
     height: clamp(40px, 5vw, 60px);
+}
+
+.wing.left #title{
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: row;
+
+    color: #ffdb66;
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 800;
+
+    margin-left: clamp(0.3rem, 1.5vw ,1rem);
 }
