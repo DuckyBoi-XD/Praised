@@ -24,7 +24,7 @@ nav {
     */
 
     padding-top: 0.75rem;
-    padding-bottom: 0.35rem;
+    padding-bottom: 0.4rem;
     padding-left: clamp(0.5rem, 3.5vw, 3rem);
 }
 
@@ -33,12 +33,12 @@ nav {
     flex-direction: inherit;
 }
 
-.wing .left #logo{
+.wing.left #logo, .wing.right #logo {
     align-items: center;
     justify-content: center;
 }
 
-.wing.left #logo img{
+#logo img{
     height: clamp(40px, 5vw, 60px);
 }
 
@@ -51,8 +51,44 @@ nav {
 
     color: #ffdb66;
     font-family: "DM Serif Display", serif;
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-size: clamp(1.2rem, 3vw, 2rem);
     font-weight: 800;
 
     margin-left: clamp(0.3rem, 1.5vw ,1rem);
+}
+
+.wing.right{
+    margin-left: auto;
+    padding-right: clamp(0.5rem, 3.5vw, 3rem);
+    align-items: center;
+    justify-content: right;
+    gap: 1rem;
+}
+
+.wing.right a{
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: row;
+
+    color: #ffb341;
+    font-family: "DM Serif Display", serif;
+    font-size: clamp(0.75rem, 2vw, 1.25rem);
+    font-weight: 800;
+
+    margin-left: clamp(0.3rem, 1.5vw, 1rem);
+    text-decoration: none;
+}
+
+.wing.right #logo{
+    align-items: center;
+    justify-content: center;
+}
+
+.wing.right #logo img{
+    height: clamp(1.5rem, 3vw, 3rem);
+    transform:translateY(-1 px);
+    margin-right: clamp(0.3rem, 1.5vw, 1rem);
+    margin-left: clamp(0.3rem, 1.5vw, 1rem);
 }
