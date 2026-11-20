@@ -62,7 +62,7 @@ nav {
     padding-right: clamp(0.5rem, 3.5vw, 3rem);
     align-items: center;
     justify-content: right;
-    gap: 0.8rem;
+    gap: 0.35rem;
 }
 
 .wing.right a{
@@ -81,12 +81,76 @@ nav {
 
 .wing.right #nav-button{
     color: #ffb341;
-    font-weight: 400;
+    font-weight: 500;
+    font-family: "DM Sans", sans-serif;
+    font-style: italic;
+
+    position: relative;
+    display: inline-block;
+    padding: 0 0 4px;
+
+    transition: color 200ms ease;
+}
+
+.wing.right #nav-button::after{
+    content: "";
+    position: absolute;
+    left: 2%;
+    top: 88%;
+    width: 90%;
+    height: 3px;
+    background-color: #ffbf36;
+    border-radius: 5px;
+
+    transform: scaleX(0);
+    transition: transform 200ms ease;
+}
+
+.wing.right #nav-button:hover{
+    color: #ffca1e;
+}
+
+.wing.right #nav-button:hover::after{
+    transform: scaleX(1);
+}
+
+.wing.right:has(#nav-button:hover) #nav-button-base::after{
+    transform: scaleX(0);
 }
 
 .wing.right #nav-button-base{
     color: #ff9f10;
     font-weight: 800;
+    font-family: "DM Sans", sans-serif;
+    font-style: italic;
+
+    position: relative;
+    display: inline-block;
+    padding: 0 0 4px;
+
+    transition: color 200ms ease;
+}
+
+.wing.right #nav-button-base::after{
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 88%;
+    width: 100%;
+    height: 3px;
+    background-color: #ffbf36;
+    border-radius: 5px;
+
+    transform: scaleX(1);
+    transition: transform 200ms ease;
+}
+
+.wing.right #nav-button-base:hover::after{
+    transform: scaleX(0);
+}
+
+.wing.right #nav-button-base:hover{
+    color: #ffb341;
 }
 
 .wing.right #logo{
@@ -98,5 +162,4 @@ nav {
     height: clamp(1.5rem, 3vw, 3rem);
     transform:translateY(-1 px);
     margin-right: clamp(0.3rem, 1.5vw, 1rem);
-    margin-left: clamp(0.3rem, 1.5vw, 1rem);
 }
