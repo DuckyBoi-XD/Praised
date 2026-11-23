@@ -212,14 +212,14 @@ nav {
     justify-content: center;
     align-items: center;
 
-    width: 50%;
+    width: 40%;
 }
 
 h1#title-text{
     color: #ffdb66;
     font-weight: 800;
     font-family: "DM Serif Display", serif;
-    font-size: 6.5rem;
+    font-size: clamp(4.5rem, 10vw, 6.5rem);
 
     margin: -1rem 0 -1rem 0;
 }
@@ -228,7 +228,7 @@ p#title-text-p{
     color: #ffb341;
     font-weight: 500;
     font-family: "DM sans", sans-serif;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 2rem);
     font-style: italic;
 
     margin: 0;
